@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+:root {
+  --bg-color: hsla(0, 0%, 100%, 1);
+  --text-color: hsla(240, 0%, 21%, 1);
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  
+  font-family: 'Roboto', sans-serif;
+
+  min-height: 100vh;
+  display: flex;
+  gap: 19.2rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#col-1 {
+  display: grid;
+  gap: 4.8rem;
+}
+
+#col-1 span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+}
+
+#controls {
+  display: flex;
+  gap: 4.0rem;
+}
+
+#col-1 button {
+  width: 4.8rem;
+  height: 4.8rem;
+
+  border: none;
+  background: transparent;
+}
+
+#col-1 button:hover svg path{
+  fill: hsla(240, 9%, 69%, 1)
+}
+
+#col-2 {
+  display: grid;
+  grid-template-areas: 
+    "A B "
+    "C D";
+  gap: 3.2rem;
+}
+
+#col-2 button {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  border: none;
+  border-radius: 2.4rem;
+
+  background-color:hsla(240, 9%, 89%, 1);
+}
+
+#col-2 button:hover {
+  background-color:hsla(240, 9%, 69%, 1);
+}
+
+#col-2 button:hover svg path{
+  fill: hsla(240, 9%, 89%, 1)
+}
+
+#col-2 button.pressed {
+  background-color: hsla(194, 97%, 31%, 1);
+}
+
+.pressed svg path {
+  fill: hsla(0, 0%, 100%, 1);
+}
+
+@media(max-width: 830px) {
+  body {
+    flex-direction: column;
+    gap: 9.6rem;
+  }
+}
+
+@media(max-width: 330px) {
+  #col-1 {
+    text-align: center;
+  }
+
+  #col-1 span {
+    font-size: 8rem;
+    line-height: 14.8rem;
+  }
+  
+  #controls {
+    gap: 3.2rem;
+  }
+  
+  #col-1 button {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+  
+  #col-2 button {
+    width: 10.35rem;
+    height: 11.4rem;
+  }
+}

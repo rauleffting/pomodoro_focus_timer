@@ -5,9 +5,16 @@
 }
 
 :root {
-  --bg-color: hsla(0, 0%, 100%, 1);
+  --bg-color: hsla(240, 0%, 100%, 1);
   --text-color: hsla(240, 0%, 21%, 1);
-
+  --tc-color: hsla(240, 0%, 21%, 1);
+  --tch-color: hsla(240, 9%, 69%, 1);
+  --ba-color: hsla(240, 9%, 89%, 1);
+  --bap-color: hsla(194, 97%, 31%, 1);
+  --bs-color: hsla(240, 0%, 21%, 1);
+  --bsp-color: hsla(240, 0%, 100%, 1);
+  --vr-color: hsla(240, 0%, 21%, 1);
+  --ft-color: hsla(0, 0%, 0%, 1);
   font-size: 62.5%;
 }
 
@@ -15,9 +22,15 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   
-  font-family: 'Roboto', sans-serif;
-
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
   display: flex;
   gap: 19.2rem;
 
@@ -50,8 +63,13 @@ body {
   background: transparent;
 }
 
+#col-1 button svg path {
+  fill: var(--tc-color);
+  transition: 300ms;
+}
+
 #col-1 button:hover svg path{
-  fill: hsla(240, 9%, 69%, 1)
+  fill: var(--tch-color);
 }
 
 #col-2 {
@@ -62,32 +80,136 @@ body {
   gap: 3.2rem;
 }
 
-#col-2 button {
+.buttonArea {
+  background-color:var(--ba-color);
   width: 13.8rem;
   height: 15.2rem;
 
-  border: none;
-  border-radius: 2.4rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
 
-  background-color:hsla(240, 9%, 89%, 1);
+  padding: auto;
+  border-radius: 2.4rem;
+  transition: 700ms;
 }
 
-#col-2 button:hover {
+.buttonArea:hover {
   background-color:hsla(240, 9%, 69%, 1);
 }
 
-#col-2 button:hover svg path{
-  fill: hsla(240, 9%, 89%, 1)
+.buttonArea:hover button svg path{
+  fill: hsla(240, 9%, 89%, 1);
 }
 
-#col-2 button.pressed {
-  background-color: hsla(194, 97%, 31%, 1);
+.buttonArea.pressed {
+  background-color: var(--bap-color);
 }
 
-.pressed svg path {
-  fill: hsla(0, 0%, 100%, 1);
+/* sound buttons */
+
+.buttonArea button {
+  border: none;
+  background: transparent;
+
+  width: 100%;
 }
 
+.buttonArea button svg path {
+  fill: var(--bs-color);
+}
+
+.pressed button svg path {
+  fill: var(--bsp-color);
+}
+
+/* volume input */
+input {
+  width: 9.6rem;
+  height: 1.6rem;
+
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+
+input::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: var(--vr-color);
+  border: none;
+  border-radius: 3px;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--vr-color);
+  margin-top: -4px;
+}
+
+.buttonArea.pressed input::-webkit-slider-runnable-track {
+  background: var(--bsp-color);
+} 
+
+.buttonArea.pressed input::-webkit-slider-thumb {
+  background: var(--bsp-color);
+}
+
+.buttonArea:hover input::-webkit-slider-runnable-track {
+  background: hsla(240, 9%, 89%, 1);
+} 
+
+.buttonArea:hover input::-webkit-slider-thumb {
+  background: hsla(240, 9%, 89%, 1);
+}
+
+/* footer */
+footer {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+footer button {
+  padding: 6rem;
+  background: transparent;
+  border: none;
+}
+
+footer button svg path {
+  fill: var(--ft-color);
+}
+
+footer button:hover svg path{
+  fill: hsla(240, 9%, 69%, 1);
+}
+
+.hide {
+  opacity: 0;
+  display: none;
+}
+
+/* dark mode */
+.dark-mode:root {
+  --bg-color: hsla(240, 5%, 7%, 1);
+  --text-color: hsla(0, 0%, 100%, 1);
+  --tc-color: hsla(240, 7%, 78%, 1);
+  --tch-color: hsla(240, 7%, 38%, 1);
+  --ba-color: hsla(240, 6%, 17%, 1);
+  --bap-color: hsla(195, 74%, 15%, 1);
+  --bs-color: hsla(240, 7%, 78%, 1);
+  --bsp-color: hsla(0, 0%, 100%, 1);
+  --vr-color: hsla(0, 0%, 100%, 1);
+  --ft-color: hsla(0, 0%, 100%, 1);
+  font-size: 62.5%;
+}
+
+/* media query*/
 @media(max-width: 830px) {
   body {
     flex-direction: column;

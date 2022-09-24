@@ -3,12 +3,27 @@ export default function({
   buttonRainSound,
   buttonCoffeeShopSound,
   buttonFireplaceSound,
+  buttonAreaFlorest,
+  buttonAreaRain,
+  buttonAreaCoffeeShop,
+  buttonAreaFireplace,
+  florestVolume,
+  rainVolume,
+  coffeeShopVolume,
+  fireplaceVolume,
   sounds
 }){
+  let volume
+  
   // sounds controls
   buttonFlorestSound.addEventListener("click",() => {
     playFlorestSound()
     toggleFlorestButton()
+  })
+
+  florestVolume.addEventListener("change", () => {
+    volume = florestVolume.value / 100
+    sounds.florestSound.volume = volume
   })
 
   buttonRainSound.addEventListener("click",() => {
@@ -16,14 +31,29 @@ export default function({
     toggleRainButton()
   })
 
+  rainVolume.addEventListener("change", () => {
+    volume = rainVolume.value / 100
+    sounds.rainSound.volume = volume
+  })
+
   buttonCoffeeShopSound.addEventListener("click",() => {
     playCoffeeShopSound()
     toggleCoffeeShopButton()
   })
 
+  coffeeShopVolume.addEventListener("change", () => {
+    volume = coffeeShopVolume.value / 100
+    sounds.coffeeShopSound.volume = volume
+  })
+
   buttonFireplaceSound.addEventListener("click",() => {
     playFireplaceSound()
     toggleFireplaceButton()
+  })
+
+  fireplaceVolume.addEventListener("change", () => {
+    volume = fireplaceVolume.value / 100
+    sounds.fireplaceSound.volume = volume
   })
 
   function playFlorestSound() {
@@ -41,6 +71,11 @@ export default function({
     buttonCoffeeShopSound.classList.remove('pressed')
     buttonFireplaceSound.classList.remove('pressed')
     buttonFlorestSound.classList.toggle('pressed')
+
+    buttonAreaRain.classList.remove('pressed')
+    buttonAreaCoffeeShop.classList.remove('pressed')
+    buttonAreaFireplace.classList.remove('pressed')
+    buttonAreaFlorest.classList.toggle('pressed')
   }
 
   function playRainSound() {
@@ -58,6 +93,11 @@ export default function({
     buttonCoffeeShopSound.classList.remove('pressed')
     buttonFireplaceSound.classList.remove('pressed')
     buttonRainSound.classList.toggle('pressed')
+
+    buttonAreaCoffeeShop.classList.remove('pressed')
+    buttonAreaFireplace.classList.remove('pressed')
+    buttonAreaFlorest.classList.remove('pressed')
+    buttonAreaRain.classList.toggle('pressed')
   }
 
   function playCoffeeShopSound() {
@@ -75,6 +115,11 @@ export default function({
     buttonRainSound.classList.remove('pressed')
     buttonFireplaceSound.classList.remove('pressed')
     buttonCoffeeShopSound.classList.toggle('pressed')
+
+    buttonAreaFireplace.classList.remove('pressed')
+    buttonAreaFlorest.classList.remove('pressed')
+    buttonAreaRain.classList.remove('pressed')
+    buttonAreaCoffeeShop.classList.toggle('pressed')
   }
 
   function playFireplaceSound() {
@@ -92,5 +137,10 @@ export default function({
     buttonRainSound.classList.remove('pressed')
     buttonCoffeeShopSound.classList.remove('pressed')
     buttonFireplaceSound.classList.toggle('pressed')
+
+    buttonAreaFlorest.classList.remove('pressed')
+    buttonAreaRain.classList.remove('pressed')
+    buttonAreaCoffeeShop.classList.remove('pressed')
+    buttonAreaFireplace.classList.toggle('pressed')
   }
 }

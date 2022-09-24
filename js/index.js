@@ -2,6 +2,7 @@ import Sounds from './sounds.js'
 import Timer from './timer.js'
 import Controls from './controls.js'
 import SoundsControls from './sounds_controls.js'
+import Modes from './modes.js'
 import {
   minutesDisplay,
   secondsDisplay,
@@ -12,7 +13,18 @@ import {
   buttonFlorestSound,
   buttonRainSound,
   buttonCoffeeShopSound,
-  buttonFireplaceSound
+  buttonFireplaceSound,
+  buttonAreaFlorest,
+  buttonAreaRain,
+  buttonAreaCoffeeShop,
+  buttonAreaFireplace,
+  florestVolume,
+  rainVolume,
+  coffeeShopVolume,
+  fireplaceVolume,
+  buttonLight,
+  buttonDark,
+  root
 } from './elements.js'
 
 const sounds = Sounds()
@@ -32,11 +44,26 @@ const controls = Controls({
   timer
 })
 
+const modes = Modes({
+  buttonLight,
+  buttonDark,
+  root
+})
+
 const soundsControls = SoundsControls({
   buttonFlorestSound,
   buttonRainSound,
   buttonCoffeeShopSound,
   buttonFireplaceSound,
+  buttonAreaFlorest,
+  buttonAreaFlorest,
+  buttonAreaRain,
+  buttonAreaCoffeeShop,
+  buttonAreaFireplace,
+  florestVolume,
+  rainVolume,
+  coffeeShopVolume,
+  fireplaceVolume,
   sounds
 })
 

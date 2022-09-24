@@ -8,6 +8,17 @@ const buttonFlorestSound = document.querySelector('#florest')
 const buttonRainSound = document.querySelector('#rain')
 const buttonCoffeeShopSound = document.querySelector('#coffee-shop')
 const buttonFireplaceSound = document.querySelector('#fireplace')
+const buttonAreaFlorest = document.querySelector('.florest')
+const buttonAreaRain = document.querySelector('.rain')
+const buttonAreaCoffeeShop = document.querySelector('.coffee-shop')
+const buttonAreaFireplace = document.querySelector('.fireplace')
+const florestVolume = document.querySelector('#florest-vol')
+const rainVolume = document.querySelector('#rain-vol')
+const coffeeShopVolume = document.querySelector('#coffee-shop-vol')
+const fireplaceVolume = document.querySelector('#fireplace-vol')
+const buttonLight = document.querySelector('#light')
+const buttonDark = document.querySelector('#dark')
+const root = document.querySelector('.root')
 
 export {
   minutesDisplay,
@@ -19,5 +30,16 @@ export {
   buttonFlorestSound,
   buttonRainSound,
   buttonCoffeeShopSound,
-  buttonFireplaceSound
+  buttonFireplaceSound,
+  buttonAreaFlorest,
+  buttonAreaRain,
+  buttonAreaCoffeeShop,
+  buttonAreaFireplace,
+  florestVolume,
+  rainVolume,
+  coffeeShopVolume,
+  fireplaceVolume,
+  buttonLight,
+  buttonDark,
+  root
 }

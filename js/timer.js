@@ -1,6 +1,6 @@
 export default function({minutesDisplay, secondsDisplay}) {
   let timerTimeout
-  // timer
+
   function countdown() {
     timerTimeout = setTimeout(() => {
       let minutes = Number(minutesDisplay.textContent)

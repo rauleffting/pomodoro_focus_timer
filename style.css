@@ -63,6 +63,10 @@ main {
   background: transparent;
 }
 
+#col-1 button:hover {
+  cursor: pointer;
+}
+
 #col-1 button svg path {
   fill: var(--tc-color);
   transition: 300ms;
@@ -117,6 +121,10 @@ main {
   width: 100%;
 }
 
+.buttonArea button:hover {
+  cursor: pointer;
+}
+
 .buttonArea button svg path {
   fill: var(--bs-color);
 }
@@ -132,6 +140,10 @@ input {
 
   -webkit-appearance: none;
   background-color: transparent;
+}
+
+input:hover {
+  cursor: pointer;
 }
 
 /* firefox */
@@ -184,11 +196,15 @@ footer button {
   border: none;
 }
 
+footer button svg:hover {
+  cursor: pointer;
+}
+
 footer button svg path {
   fill: var(--ft-color);
 }
 
-footer button:hover svg path{
+footer button svg:hover path{
   fill: hsla(240, 9%, 69%, 1);
 }
 

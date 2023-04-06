@@ -25,7 +25,7 @@ To get started, you can simply clone this repository and open the `index.html` f
 Usage
 -----
 
-Just run on your navigator.
+Run on your navigator using live server with VSCode.
 
 Contributing
 ------------

@@ -1,4 +1,4 @@
-Vanilla Pomodoro Focus Timer
+:alarm_clock: Vanilla Pomodoro Focus Timer
 ====================
 
 The Pomodoro Focus Timer is a simple web application that helps you manage your time more effectively. It allows you to set a timer for a certain amount of time, take breaks, and track your progress. This project is built using Vanilla JavaScript, HTML, and CSS.
